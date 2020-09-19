@@ -1,0 +1,1 @@
+This project is a sample room database with retrofit, and show them on recycler view using data binding.
