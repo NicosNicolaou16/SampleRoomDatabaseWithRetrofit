@@ -1,7 +1,8 @@
-package com.nick.sampleroomandretrofit
+package com.nick.sampleroomandretrofit.modules.main_activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nick.sampleroomandretrofit.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
