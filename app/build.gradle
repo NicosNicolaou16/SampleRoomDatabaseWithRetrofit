@@ -16,7 +16,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         multiDexEnabled true
 
         //data binding
@@ -104,5 +104,8 @@ dependencies {
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
     //gson
     implementation 'com.google.code.gson:gson:2.8.6'
+    //Retrofit request
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
 }
