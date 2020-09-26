@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="ship"
+            type="com.nick.sampleroomandretrofit.database.models.ShipsModel" />
+
+        <variable
+            name="listener"
+            type="com.nick.sampleroomandretrofit.modules.ships.adapters.ShipsListAdapter.ShipListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:onClick="@{() -> listener.onShipClick(ship.ship_id)}"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ship_photo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:loadImage="@{ship.url}"
+            android:padding="4dp"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ship_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@{ship.ship_name}"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@+id/ship_type"
+            app:layout_constraintStart_toEndOf="@+id/ship_photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ship_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="32dp"
+            android:text="@{ship.ship_type}"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ship_photo"
+            app:layout_constraintTop_toBottomOf="@+id/ship_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

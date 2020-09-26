@@ -27,5 +27,13 @@
         android:id="@+id/shipFragment"
         android:name="com.nick.sampleroomandretrofit.modules.ship.ShipFragment"
         android:label="fragment_ship"
-        tools:layout="@layout/fragment_ship" />
+        tools:layout="@layout/fragment_ship" >
+        <argument
+            android:name="shipId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_shipFragment_to_shipsFragment"
+            app:destination="@id/shipsFragment" />
+    </fragment>
 </navigation>
