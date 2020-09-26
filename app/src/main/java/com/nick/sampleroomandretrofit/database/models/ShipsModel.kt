@@ -28,11 +28,12 @@ data class ShipsModel(
 
         fun insertShips(shipsModelList: MutableList<ShipsModel>) = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
             flow {
-
+                val shipsModelListTemp = mutableListOf<ShipsModel>()
                 shipsModelList.forEach {
                     insertPosition(it)
+                    shipsModelListTemp.add(it)
                 }
-                getDatabase().shipDao().insertOrReplaceList(shipsModelList)
+                getDatabase().shipDao().insertOrReplaceList(shipsModelListTemp)
                 emit(getDatabase().shipDao().getAllShips())
             }
         }

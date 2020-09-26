@@ -1,10 +1,12 @@
 package com.nick.sampleroomandretrofit.modules.ships
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
@@ -40,7 +42,20 @@ class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
     }
 
     private fun initObservables() {
+        shipsViewModel.ships.observe(viewLifecycleOwner, Observer {
+            it.forEach {
+                Log.d("initObservables", it.image?:"null")
+            }
+            shipsListAdapter?.load(it)
+        })
 
+        shipsViewModel.loading.observe(viewLifecycleOwner, Observer {
+            if (it) startDefaultLoading() else stopLoading()
+        })
+
+        shipsViewModel.error.observe(viewLifecycleOwner, Observer {
+            showError(it)
+        })
     }
 
     private fun initAdapter() {

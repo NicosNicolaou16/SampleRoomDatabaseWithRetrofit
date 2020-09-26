@@ -18,6 +18,12 @@ class ShipsListAdapter(private var shipsModelList: MutableList<ShipsModel>, priv
         return ShipViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.ship_layout_recycler_view, parent, false))
     }
 
+    fun load(shipsModelList: MutableList<ShipsModel>) {
+        this.shipsModelList.clear()
+        this.shipsModelList.addAll(shipsModelList)
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is ShipViewHolder -> holder.bindData(shipsModelList[position])
@@ -27,8 +33,11 @@ class ShipsListAdapter(private var shipsModelList: MutableList<ShipsModel>, priv
     override fun getItemCount(): Int = shipsModelList.size
 
     private inner class ShipViewHolder(var view: ShipLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root), ShipListener {
+
         fun bindData(shipsModel: ShipsModel?) = with(view) {
-            ship = shipsModel
+            if (shipsModel != null) {
+                ship = shipsModel
+            }
             listener = this@ShipViewHolder
         }
 

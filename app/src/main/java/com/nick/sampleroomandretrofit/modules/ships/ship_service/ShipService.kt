@@ -5,6 +5,6 @@ import retrofit2.http.GET
 
 interface ShipService {
 
-    @GET("")
+    @GET("v3/ships")
     suspend fun getShips(): MutableList<ShipsModel>
 }

@@ -27,6 +27,6 @@ fun ImageView.loadImageBind(url: String?, progressDrawable: CircularProgressDraw
 }
 
 @BindingAdapter("android:loadImage")
-fun loadImageBinding(imageView: ImageView, url: String) {
+fun loadImageBinding(imageView: ImageView, url: String?) {
     imageView.loadImageBind(url, getProgressDrawable(imageView.context))
 }
