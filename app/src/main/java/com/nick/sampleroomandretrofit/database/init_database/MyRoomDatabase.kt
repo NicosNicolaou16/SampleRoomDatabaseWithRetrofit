@@ -5,15 +5,24 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.nick.sampleroomandretrofit.database.models.TestModel
+import com.nick.nickJetPackProjectAndExtras.room_database.ships.PositionDao
+import com.nick.nickJetPackProjectAndExtras.room_database.ships.PositionModel
+import com.nick.nickJetPackProjectAndExtras.room_database.ships.ShipAndPositionDao
+import com.nick.nickJetPackProjectAndExtras.room_database.ships.ShipsDao
+import com.nick.sampleroomandretrofit.database.models.ShipsModel
+import com.nick.sampleroomandretrofit.database.type_converters.ConverterPosition
 
 @Database(
-        entities = [TestModel::class],
+        entities = [ShipsModel::class, PositionModel::class],
         version = 1,
         exportSchema = false
 )
-//@TypeConverters()
+@TypeConverters(ConverterPosition::class, )
 abstract class MyRoomDatabase : RoomDatabase() {
+
+    abstract fun shipDao(): ShipsDao
+    abstract fun positionDao(): PositionDao
+    abstract fun shipAndPositionDao(): ShipAndPositionDao
 
     companion object {
         @Volatile
