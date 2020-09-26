@@ -1,6 +1,6 @@
-This project is a sample room database with retrofit, and show them on recycler view using data binding.
+This is a sample project that uses room database with retrofit to present dummy data on a recycler view using data binding. <br />
 
-# The Project contain:
+# The Project contains:
 Room Database <br />
 Retrofit (Network Manager) <br />
 Data Binding <br />
