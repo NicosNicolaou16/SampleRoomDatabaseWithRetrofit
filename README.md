@@ -10,6 +10,10 @@ Navigation <br />
 Live Data <br />
 MVVM <br />
 
+# Feeds/Urls/End point
+https://github.com/r-spacex/SpaceX-API (GitHub) <br />
+https://docs.spacexdata.com/?version=latest (Postman) <br />
+
 Target SDK version: 30 <br />
 Minimum SDK version: 23 <br />
 Kotlin version: 1.4.10 <br />
