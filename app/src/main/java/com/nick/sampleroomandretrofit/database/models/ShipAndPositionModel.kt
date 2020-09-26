@@ -2,6 +2,7 @@ package com.nick.nickJetPackProjectAndExtras.room_database.ships
 
 import androidx.room.Embedded
 import androidx.room.Relation
+import com.nick.sampleroomandretrofit.database.models.ShipsModel
 
 /**
  * One to One relationship

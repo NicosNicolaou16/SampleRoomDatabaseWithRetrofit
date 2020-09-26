@@ -3,6 +3,7 @@ package com.nick.sampleroomandretrofit.utils.base_classes
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.annotation.MainThread
 import androidx.annotation.UiThread
 import androidx.appcompat.app.AlertDialog
@@ -43,6 +44,10 @@ abstract class BaseFragment : Fragment() {
             create()
             loadingShown = show()
         }
+    }
+
+    protected fun showError(message: String) {
+        Toast.makeText(context, getString(R.string.something_went_wrong), Toast.LENGTH_SHORT).show()
     }
 
     @UiThread

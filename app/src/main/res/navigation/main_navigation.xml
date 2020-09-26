@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/launcherFragment">
+
+    <fragment
+        android:id="@+id/launcherFragment"
+        android:name="com.nick.sampleroomandretrofit.modules.launcher.LauncherFragment"
+        android:label="fragment_launcher"
+        tools:layout="@layout/fragment_launcher" >
+        <action
+            android:id="@+id/action_launcherFragment_to_shipsFragment"
+            app:destination="@id/shipsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipsFragment"
+        android:name="com.nick.sampleroomandretrofit.modules.ships.ShipsFragment"
+        android:label="fragment_ships"
+        tools:layout="@layout/fragment_ships" >
+        <action
+            android:id="@+id/action_shipsFragment_to_shipFragment"
+            app:destination="@id/shipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shipFragment"
+        android:name="com.nick.sampleroomandretrofit.modules.ship.ShipFragment"
+        android:label="fragment_ship"
+        tools:layout="@layout/fragment_ship" />
+</navigation>
