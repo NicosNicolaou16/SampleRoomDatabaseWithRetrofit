@@ -4,9 +4,6 @@ import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
 
-/**
- * One to One relationship Dao
- * */
 @Dao
 interface ShipAndPositionDao {
 

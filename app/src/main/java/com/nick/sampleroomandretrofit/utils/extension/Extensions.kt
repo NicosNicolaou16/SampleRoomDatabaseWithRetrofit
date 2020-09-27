@@ -16,17 +16,17 @@ fun getProgressDrawable(context: Context): CircularProgressDrawable {
     }
 }
 
-fun ImageView.loadImageBind(drawable: Int?, progressDrawable: CircularProgressDrawable) {
+fun ImageView.loadImageBind(url: String?, progressDrawable: CircularProgressDrawable) {
     val options = RequestOptions()
             .placeholder(progressDrawable)
             .error(R.mipmap.ic_launcher_round)
     Glide.with(context)
             .setDefaultRequestOptions(options)
-            .load(drawable)
+            .load(url)
             .into(this)
 }
 
-@BindingAdapter("android:imageDrawable")
-fun loadImageBinding(imageView: ImageView, drawable: Int) {
-    imageView.loadImageBind(drawable, getProgressDrawable(imageView.context))
+@BindingAdapter("android:loadImage")
+fun loadImageBinding(imageView: ImageView, url: String?) {
+    imageView.loadImageBind(url, getProgressDrawable(imageView.context))
 }
