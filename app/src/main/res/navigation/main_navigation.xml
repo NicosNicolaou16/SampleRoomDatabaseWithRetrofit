@@ -20,14 +20,14 @@
         android:label="fragment_ships"
         tools:layout="@layout/fragment_ships" >
         <action
-            android:id="@+id/action_shipsFragment_to_shipFragment"
-            app:destination="@id/shipFragment" />
+            android:id="@+id/action_shipsFragment_to_shipDetailsFragment"
+            app:destination="@id/shipDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/shipFragment"
-        android:name="com.nick.sampleroomandretrofit.modules.ship.ShipFragment"
+        android:id="@+id/shipDetailsFragment"
+        android:name="com.nick.sampleroomandretrofit.modules.ship.ShipDetailsFragment"
         android:label="fragment_ship"
-        tools:layout="@layout/fragment_ship" >
+        tools:layout="@layout/fragment_ship_details" >
         <argument
             android:name="shipId"
             app:argType="string"
