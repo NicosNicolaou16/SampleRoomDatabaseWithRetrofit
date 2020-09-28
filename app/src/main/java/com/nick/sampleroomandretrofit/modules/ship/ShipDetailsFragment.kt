@@ -51,7 +51,7 @@ class ShipDetailsFragment : BaseFragment() {
     }
 
     private fun initObservable() {
-        shipDetailsViewModel.ship.observe(viewLifecycleOwner, Observer {
+        shipDetailsViewModel.shipDetails.observe(viewLifecycleOwner, Observer {
             setShipData(it)
         })
 

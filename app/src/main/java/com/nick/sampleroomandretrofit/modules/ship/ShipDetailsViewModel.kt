@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 
 class ShipDetailsViewModel(application: Application) : BaseViewModel(application) {
 
-    var ship = MutableLiveData<ShipsModel>()
+    var shipDetails = MutableLiveData<ShipsModel>()
 
     fun getSpecificShipById(shipId: String) = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
         if (shipId != "") {
@@ -23,7 +23,7 @@ class ShipDetailsViewModel(application: Application) : BaseViewModel(application
                     shipsModel = getDatabase().shipDao().getShipById(shipId)
                 }
                 loading.value = false
-                ship.value = shipsModel
+                shipDetails.value = shipsModel
             }
         } else {
             loading.value = false
