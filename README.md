@@ -10,8 +10,8 @@ Navigation <br />
 Live Data <br />
 MVVM <br />
 
-# Feeds/Urls/End point (parsing some data for sample)
-## (Links References)
+# Feeds/Urls/End Point (parsing some data from response)
+## (Links References for Ends Points)
 https://github.com/r-spacex/SpaceX-API (GitHub) <br />
 https://docs.spacexdata.com/?version=latest (Postman) <br />
 
