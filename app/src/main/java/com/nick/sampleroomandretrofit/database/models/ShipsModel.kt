@@ -28,6 +28,7 @@ data class ShipsModel(
 
         fun insertShips(shipsModelList: MutableList<ShipsModel>) = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
             flow {
+                deletePositionModel()
                 val shipsModelListTemp = mutableListOf<ShipsModel>()
                 shipsModelList.forEach {
                     insertPosition(it)
@@ -42,6 +43,10 @@ data class ShipsModel(
             PositionModel.insertThePosition(shipsModel.position).collect {
                 shipsModel.positionId = it.position_id
             }
+        }
+
+        private suspend fun deletePositionModel() = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
+            getDatabase().positionDao().deleteAll()
         }
     }
 }
