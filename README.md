@@ -4,6 +4,7 @@ This is a sample project that uses room database with retrofit to present dummy 
 Room Database <br />
 Retrofit (Network Manager) <br />
 Data Binding <br />
+View Binding <br />
 Coroutines <br />
 Kotlin ktx <br />
 Navigation <br />
@@ -17,5 +18,5 @@ https://docs.spacexdata.com/?version=latest (Postman) <br />
 
 Target SDK version: 30 <br />
 Minimum SDK version: 23 <br />
-Kotlin version: 1.4.10 <br />
-Gradle version: 4.1.0 <br />
+Kotlin version: 1.4.21 <br />
+Gradle version: 4.1.1 <br />

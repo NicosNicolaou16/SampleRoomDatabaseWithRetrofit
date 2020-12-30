@@ -9,9 +9,9 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
+import com.nick.sampleroomandretrofit.databinding.FragmentShipsBinding
 import com.nick.sampleroomandretrofit.modules.ships.adapters.ShipsListAdapter
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
-import kotlinx.android.synthetic.main.fragment_ships.*
 
 /**
  * A simple [Fragment] subclass.
@@ -22,6 +22,7 @@ class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
 
     private var shipsViewModel = ShipsViewModel(SampleRoomDatabaseAndRetrofitApplication.getInstance())
     private var shipsListAdapter: ShipsListAdapter? = null
+    private var binding: FragmentShipsBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -30,7 +31,7 @@ class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding = FragmentShipsBinding.bind(view)
         init()
     }
 
@@ -55,7 +56,7 @@ class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
 
     private fun initAdapter() {
         shipsListAdapter = ShipsListAdapter(mutableListOf(), this)
-        shipsList.apply {
+        binding?.shipsList?.apply {
             adapter = shipsListAdapter
         }
     }

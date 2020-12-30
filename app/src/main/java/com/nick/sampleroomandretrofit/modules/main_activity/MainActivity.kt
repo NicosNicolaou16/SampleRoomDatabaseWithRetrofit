@@ -5,15 +5,18 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.nick.sampleroomandretrofit.R
+import com.nick.sampleroomandretrofit.databinding.ActivityMainBinding
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseActivity
 
 class MainActivity : BaseActivity() {
 
     private lateinit var navController: NavController
+    private var binding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
 
         initNavigationToFragment()
     }

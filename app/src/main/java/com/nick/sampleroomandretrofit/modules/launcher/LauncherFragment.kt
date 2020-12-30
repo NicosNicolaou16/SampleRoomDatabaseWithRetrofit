@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
+import com.nick.sampleroomandretrofit.databinding.FragmentLauncherBinding
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
 
 /**
@@ -19,15 +20,16 @@ import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
 class LauncherFragment : BaseFragment() {
 
     private var launcherViewModel = LauncherViewModel(SampleRoomDatabaseAndRetrofitApplication.getInstance())
+    private var binding: FragmentLauncherBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_launcher, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentLauncherBinding.bind(view)
         init()
     }
 
