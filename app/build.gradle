@@ -61,7 +61,7 @@ ext {
     roomVersion = "2.2.6"
     glideVersion = "4.11.0"
     navVersion = '2.3.2'
-    coroutineVersion = '1.4.0'
+    coroutineVersion = '1.4.2'
     multidexVersion = "2.0.1"
     materialDesignVersion = "1.2.1"
     retrofitVersion = "2.9.0"
