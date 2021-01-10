@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.databinding.FragmentShipsBinding
+import com.nick.sampleroomandretrofit.modules.ship.ShipDetailsViewModel
 import com.nick.sampleroomandretrofit.modules.ships.adapters.ShipsListAdapter
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
 
@@ -20,7 +22,7 @@ import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
  */
 class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
 
-    private var shipsViewModel = ShipsViewModel(SampleRoomDatabaseAndRetrofitApplication.getInstance())
+    private lateinit var shipsViewModel: ShipsViewModel
     private var shipsListAdapter: ShipsListAdapter? = null
     private var binding: FragmentShipsBinding? = null
 
@@ -32,6 +34,8 @@ class ShipsFragment : BaseFragment(), ShipsListAdapter.ShipListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentShipsBinding.bind(view)
+        shipsViewModel = ViewModelProvider(this).get(ShipsViewModel::class.java)
+
         init()
     }
 

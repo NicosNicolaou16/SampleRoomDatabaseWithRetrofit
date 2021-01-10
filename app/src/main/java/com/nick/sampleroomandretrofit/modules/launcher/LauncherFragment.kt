@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
@@ -19,7 +20,7 @@ import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
  */
 class LauncherFragment : BaseFragment() {
 
-    private var launcherViewModel = LauncherViewModel(SampleRoomDatabaseAndRetrofitApplication.getInstance())
+    private lateinit var launcherViewModel: LauncherViewModel
     private var binding: FragmentLauncherBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +31,8 @@ class LauncherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLauncherBinding.bind(view)
+        launcherViewModel = ViewModelProvider(this).get(LauncherViewModel::class.java)
+
         init()
     }
 

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
@@ -20,7 +21,7 @@ import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
  */
 class ShipDetailsFragment : BaseFragment() {
 
-    private val shipDetailsViewModel = ShipDetailsViewModel(SampleRoomDatabaseAndRetrofitApplication.getInstance())
+    private lateinit var shipDetailsViewModel: ShipDetailsViewModel
     private lateinit var bindData: FragmentShipDetailsBinding
     private var shipId: String = ""
 
@@ -32,6 +33,7 @@ class ShipDetailsFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        shipDetailsViewModel = ViewModelProvider(this).get(ShipDetailsViewModel::class.java)
 
         init()
     }
