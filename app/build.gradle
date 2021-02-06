@@ -59,8 +59,8 @@ ext {
     lifeCycleComplilerAndViewModelVersion = "2.2.0"
     lifecycle_livedata_ktxVersion = "2.3.0-rc01"
     roomVersion = "2.2.6"
-    glideVersion = "4.11.0"
-    navVersion = '2.3.2'
+    glideVersion = "4.12.0"
+    navVersion = '2.3.3'
     coroutineVersion = '1.4.2'
     multidexVersion = "2.0.1"
     materialDesignVersion = "1.2.1"
