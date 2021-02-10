@@ -63,7 +63,7 @@ ext {
     navVersion = '2.3.3'
     coroutineVersion = '1.4.2'
     multidexVersion = "2.0.1"
-    materialDesignVersion = "1.2.1"
+    materialDesignVersion = "1.3.0"
     retrofitVersion = "2.9.0"
 }
 
