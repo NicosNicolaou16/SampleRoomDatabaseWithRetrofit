@@ -56,8 +56,7 @@ android {
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
-    lifeCycleComplilerAndViewModelVersion = "2.2.0"
-    lifecycle_livedata_ktxVersion = "2.3.0-rc01"
+    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = "2.3.0"
     roomVersion = "2.2.6"
     glideVersion = "4.12.0"
     navVersion = '2.3.3'
@@ -77,15 +76,15 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
-    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //live cycle and data
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifeCycleComplilerAndViewModelVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
     //KTX - Live data
     //noinspection LifecycleAnnotationProcessorWithJava8
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifeCycleComplilerAndViewModelVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_livedata_ktxVersion"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
     //room database
     implementation "androidx.room:room-runtime:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
