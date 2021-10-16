@@ -8,7 +8,7 @@ class ShipsRepository {
         const val BASE_URL = "https://api.spacexdata.com"
     }
 
-    fun requestBuilder() = Retrofit.Builder()
+    fun requestBuilder(): ShipService = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

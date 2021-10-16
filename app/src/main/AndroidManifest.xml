@@ -3,7 +3,7 @@
     package="com.nick.sampleroomandretrofit">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
     <application
         android:name=".application.SampleRoomDatabaseAndRetrofitApplication"
         android:allowBackup="true"
@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.nick.sampleroomandretrofit.modules.main_activity.MainActivity">
+        <activity
+            android:name="com.nick.sampleroomandretrofit.modules.main_activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
