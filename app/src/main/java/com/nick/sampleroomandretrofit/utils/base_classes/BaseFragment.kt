@@ -8,7 +8,7 @@ import androidx.annotation.MainThread
 import androidx.annotation.UiThread
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import com.nick.sampleroomandretrofit.R
 
 abstract class BaseFragment : Fragment() {
@@ -21,7 +21,6 @@ abstract class BaseFragment : Fragment() {
     }
 
     override fun onDestroy() {
-        MyRoomDatabase.destroyInstance()
         super.onDestroy()
     }
 

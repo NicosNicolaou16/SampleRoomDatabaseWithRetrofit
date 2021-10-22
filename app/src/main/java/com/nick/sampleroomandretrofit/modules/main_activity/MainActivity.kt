@@ -7,7 +7,9 @@ import androidx.navigation.ui.NavigationUI
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.databinding.ActivityMainBinding
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity() {
 
     private lateinit var navController: NavController

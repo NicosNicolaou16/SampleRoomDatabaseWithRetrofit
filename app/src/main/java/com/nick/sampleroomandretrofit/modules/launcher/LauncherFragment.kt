@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -12,15 +13,21 @@ import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.databinding.FragmentLauncherBinding
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 /**
  * A simple [Fragment] subclass.
  * Use the [LauncherFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+@AndroidEntryPoint
 class LauncherFragment : BaseFragment() {
 
-    private lateinit var launcherViewModel: LauncherViewModel
+    /**
+     * ViewModelProvider(this).get(LauncherViewModel::class.java) or by viewModels() (KTX way)
+     * */
+    private val launcherViewModel: LauncherViewModel by viewModels()
     private var binding: FragmentLauncherBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +38,7 @@ class LauncherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLauncherBinding.bind(view)
-        launcherViewModel = ViewModelProvider(this).get(LauncherViewModel::class.java)
+        //launcherViewModel = ViewModelProvider(this).get(LauncherViewModel::class.java)
 
         init()
     }

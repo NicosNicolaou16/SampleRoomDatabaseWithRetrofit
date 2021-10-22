@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -27,7 +28,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = ["room.incremental": "true"]
+                arguments += ["room.incremental": "true"]
             }
         }
     }
@@ -64,6 +65,8 @@ ext {
     multidexVersion = "2.0.1"
     materialDesignVersion = "1.4.0"
     retrofitVersion = "2.9.0"
+    hiltVersion = "2.39.1"
+    hiltCompilerVersion = "1.0.0"
 }
 
 dependencies {
@@ -107,5 +110,9 @@ dependencies {
     //Retrofit request
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    //Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
 
 }

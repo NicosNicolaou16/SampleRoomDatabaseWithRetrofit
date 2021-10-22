@@ -2,19 +2,20 @@ package com.nick.sampleroomandretrofit.utils.base_classes
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import okhttp3.ResponseBody
 import androidx.lifecycle.MutableLiveData
-import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import okhttp3.ResponseBody
 import org.json.JSONArray
 import org.json.JSONObject
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException
+import javax.inject.Inject
 import kotlin.coroutines.CoroutineContext
 
 abstract class BaseViewModel(application: Application) : AndroidViewModel(application), CoroutineScope {
@@ -22,6 +23,11 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
     private val job = Job()
     internal val loading = MutableLiveData<Boolean>()
     internal val error = MutableLiveData<String>()
+
+    @Inject
+    protected lateinit var myRoomDatabase: MyRoomDatabase
+    @Inject
+    protected lateinit var sampleRoomDatabaseAndRetrofitApplication: SampleRoomDatabaseAndRetrofitApplication
 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
@@ -62,6 +68,5 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
     override fun onCleared() {
         super.onCleared()
         job.cancel()
-        MyRoomDatabase.destroyInstance()
     }
 }

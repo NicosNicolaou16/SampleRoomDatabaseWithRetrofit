@@ -6,7 +6,7 @@ import androidx.annotation.MainThread
 import androidx.annotation.UiThread
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import com.nick.sampleroomandretrofit.R
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -19,7 +19,6 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        MyRoomDatabase.destroyInstance()
         super.onDestroy()
     }
 
