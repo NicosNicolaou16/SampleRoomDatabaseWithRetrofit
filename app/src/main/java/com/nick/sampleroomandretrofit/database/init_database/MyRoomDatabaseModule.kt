@@ -13,12 +13,14 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 @InstallIn(ViewModelComponent::class)
 object MyRoomDatabaseModule {
 
+    private val LOCK = Any()
+
     @Provides
     fun initRoomDataBase(@ApplicationContext context: Context): MyRoomDatabase {
-        return Room.databaseBuilder(
+        return synchronized(LOCK) { Room.databaseBuilder(
             context.applicationContext,
             MyRoomDatabase::class.java,
             DB_NAME
-        ).build()
+        ).build() }
     }
 }
