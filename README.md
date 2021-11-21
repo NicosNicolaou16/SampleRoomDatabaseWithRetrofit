@@ -10,6 +10,7 @@ Kotlin ktx <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
+Hilt <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
 # Feeds/Urls/End Point (parsing some data from response)
@@ -19,5 +20,5 @@ https://docs.spacexdata.com/?version=latest (Postman) <br />
 
 Target SDK version: 31 <br />
 Minimum SDK version: 23 <br />
-Kotlin version: 1.5.31 <br />
+Kotlin version: 1.6.0 <br />
 Gradle version: 7.0.3 <br />
