@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_launcher" >
         <action
             android:id="@+id/action_launcherFragment_to_shipsFragment"
-            app:destination="@id/shipsFragment" />
+            app:destination="@id/shipsFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/navigation"
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/shipsFragment"
