@@ -1,7 +1,7 @@
 package com.nick.sampleroomandretrofit.application
 
 import android.app.Application
-import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 
 class SampleRoomDatabaseAndRetrofitApplication: Application() {
 

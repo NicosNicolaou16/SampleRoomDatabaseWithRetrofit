@@ -1,4 +1,4 @@
-package com.nick.nickJetPackProjectAndExtras.room_database.ships
+package com.nick.sampleroomandretrofit.database.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

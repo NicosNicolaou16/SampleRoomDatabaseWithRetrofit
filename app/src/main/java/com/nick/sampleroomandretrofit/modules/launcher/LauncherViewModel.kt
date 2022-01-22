@@ -24,5 +24,4 @@ class LauncherViewModel(application: Application) : BaseViewModel(application) {
             startMainScreen.value = true
         }
     }
-
 }

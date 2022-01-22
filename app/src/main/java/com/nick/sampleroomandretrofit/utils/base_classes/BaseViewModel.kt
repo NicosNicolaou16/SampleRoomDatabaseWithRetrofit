@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import okhttp3.ResponseBody
 import androidx.lifecycle.MutableLiveData
-import com.nick.sampleroom.database.init_database.MyRoomDatabase
+import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import com.nick.sampleroomandretrofit.R
 import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import kotlinx.coroutines.CoroutineScope

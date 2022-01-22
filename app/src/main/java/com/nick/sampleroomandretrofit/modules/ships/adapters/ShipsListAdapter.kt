@@ -32,17 +32,13 @@ class ShipsListAdapter(private var shipsModelList: MutableList<ShipsModel>, priv
 
     override fun getItemCount(): Int = shipsModelList.size
 
-    private inner class ShipViewHolder(var view: ShipLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root), ShipListener {
+    private inner class ShipViewHolder(var view: ShipLayoutRecyclerViewBinding) : RecyclerView.ViewHolder(view.root) {
 
         fun bindData(shipsModel: ShipsModel?) = with(view) {
             if (shipsModel != null) {
                 ship = shipsModel
             }
-            listener = this@ShipViewHolder
-        }
-
-        override fun onShipClick(shipId: String) {
-            shipListener.onShipClick(shipId)
+            listener = shipListener
         }
     }
 }

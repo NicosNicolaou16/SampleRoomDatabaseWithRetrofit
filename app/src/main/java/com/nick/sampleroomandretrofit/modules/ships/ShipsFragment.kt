@@ -1,17 +1,15 @@
 package com.nick.sampleroomandretrofit.modules.ships
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.nick.sampleroomandretrofit.R
-import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.databinding.FragmentShipsBinding
-import com.nick.sampleroomandretrofit.modules.ship.ShipDetailsViewModel
 import com.nick.sampleroomandretrofit.modules.ships.adapters.ShipsListAdapter
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseFragment
 

@@ -1,14 +1,14 @@
-package com.nick.sampleroom.database.init_database
+package com.nick.sampleroomandretrofit.database.init_database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.nick.nickJetPackProjectAndExtras.room_database.ships.PositionDao
-import com.nick.nickJetPackProjectAndExtras.room_database.ships.PositionModel
-import com.nick.nickJetPackProjectAndExtras.room_database.ships.ShipAndPositionDao
-import com.nick.nickJetPackProjectAndExtras.room_database.ships.ShipsDao
+import com.nick.sampleroomandretrofit.database.models.PositionDao
+import com.nick.sampleroomandretrofit.database.models.PositionModel
+import com.nick.sampleroomandretrofit.database.models.ShipAndPositionDao
+import com.nick.sampleroomandretrofit.database.models.ShipsDao
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
 import com.nick.sampleroomandretrofit.database.type_converters.ConverterPosition
 
