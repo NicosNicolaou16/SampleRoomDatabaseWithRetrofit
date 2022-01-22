@@ -9,5 +9,4 @@ class SampleRoomDatabaseAndRetrofitApplication: Application() {
     override fun onCreate() {
         super.onCreate()
     }
-
 }

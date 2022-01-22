@@ -12,7 +12,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ShipsModules {
     private const val BASE_URL = "https://api.spacexdata.com"
 
-
     @Provides
     fun getShipsList(retrofit: Retrofit): ShipService {
         return retrofit.create(ShipService::class.java)

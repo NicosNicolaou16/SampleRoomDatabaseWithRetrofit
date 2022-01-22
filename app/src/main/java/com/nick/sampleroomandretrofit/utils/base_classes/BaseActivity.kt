@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import com.nick.sampleroomandretrofit.R
+import com.nick.sampleroomandretrofit.databinding.RecommendedDefaultLoadingLayoutBinding
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -35,9 +36,9 @@ abstract class BaseActivity : AppCompatActivity() {
     protected fun startDefaultLoading() {
         runOnUiThread {  }
         stopLoading()
-        val loadingView = LayoutInflater.from(this).inflate(R.layout.recommended_default_loading_layout, null)
-        loadingProgressBar = this.let { AlertDialog.Builder(it, R.style.CustomAlertDialog) }.apply {
-            setView(loadingView)
+        val loadingView = RecommendedDefaultLoadingLayoutBinding.inflate(LayoutInflater.from(this))
+        loadingProgressBar = AlertDialog.Builder(this, R.style.CustomAlertDialog).apply {
+            setView(loadingView.root)
             setCancelable(false)
             create()
             loadingShown = show()

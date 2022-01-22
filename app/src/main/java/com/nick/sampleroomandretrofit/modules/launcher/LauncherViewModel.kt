@@ -27,5 +27,4 @@ class LauncherViewModel @Inject constructor(application: Application) : BaseView
             startMainScreen.value = true
         }
     }
-
 }
