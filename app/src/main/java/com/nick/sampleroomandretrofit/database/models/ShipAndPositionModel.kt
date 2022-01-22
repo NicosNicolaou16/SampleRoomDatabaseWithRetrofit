@@ -2,12 +2,13 @@ package com.nick.nickJetPackProjectAndExtras.room_database.ships
 
 import androidx.room.Embedded
 import androidx.room.Relation
+import com.nick.sampleroomandretrofit.database.models.PositionModel
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
 
 data class ShipAndPositionModel(
-        @Embedded
+    @Embedded
         var positionModel: PositionModel,
-        @Relation(
+    @Relation(
                 parentColumn = "position_id",
                 entityColumn = "positionId"
         )

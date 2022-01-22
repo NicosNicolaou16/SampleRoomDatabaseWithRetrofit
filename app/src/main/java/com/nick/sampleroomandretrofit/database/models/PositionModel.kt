@@ -1,8 +1,7 @@
-package com.nick.nickJetPackProjectAndExtras.room_database.ships
+package com.nick.sampleroomandretrofit.database.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.database.init_database.MyRoomDatabase
 import kotlinx.coroutines.flow.flow
 

@@ -1,14 +1,11 @@
 package com.nick.sampleroomandretrofit.modules.ship
 
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.MutableLiveData
 import com.nick.sampleroomandretrofit.R
-import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

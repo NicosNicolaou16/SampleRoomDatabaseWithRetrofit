@@ -3,7 +3,7 @@ package com.nick.sampleroomandretrofit.database.type_converters
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.nick.nickJetPackProjectAndExtras.room_database.ships.PositionModel
+import com.nick.sampleroomandretrofit.database.models.PositionModel
 
 class ConverterPosition {
 
