@@ -57,10 +57,10 @@ android {
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
-    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = "2.4.0"
+    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = "2.4.1"
     roomVersion = "2.4.1"
-    glideVersion = "4.12.0"
-    navVersion = '2.3.5'
+    glideVersion = '4.13.0'
+    navVersion = '2.4.1'
     coroutineVersion = '1.6.0'
     multidexVersion = "2.0.1"
     materialDesignVersion = "1.5.0"
@@ -106,7 +106,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
     //gson
-    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.google.code.gson:gson:2.9.0'
     //Retrofit request
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
