@@ -57,8 +57,8 @@ android {
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = "2.4.1"
-    roomVersion = '2.4.1'
-    glideVersion = '4.13.0'
+    roomVersion = '2.4.2'
+    glideVersion = '4.13.1'
     navVersion = '2.4.1'
     coroutineVersion = '1.6.0'
     multidexVersion = "2.0.1"
