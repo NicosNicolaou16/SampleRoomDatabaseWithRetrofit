@@ -8,6 +8,7 @@ class SampleRoomDatabaseAndRetrofitApplication: Application() {
     companion object {
         private lateinit var instance: SampleRoomDatabaseAndRetrofitApplication
 
+        @JvmStatic
         fun getInstance() = instance
     }
 
