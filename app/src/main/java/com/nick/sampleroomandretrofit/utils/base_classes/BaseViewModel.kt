@@ -26,8 +26,6 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
 
     @Inject
     protected lateinit var myRoomDatabase: MyRoomDatabase
-    @Inject
-    protected lateinit var sampleRoomDatabaseAndRetrofitApplication: SampleRoomDatabaseAndRetrofitApplication
 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main

@@ -3,6 +3,7 @@ package com.nick.sampleroomandretrofit.modules.ship
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import com.nick.sampleroomandretrofit.R
+import com.nick.sampleroomandretrofit.application.SampleRoomDatabaseAndRetrofitApplication
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,7 +30,7 @@ class ShipDetailsViewModel @Inject constructor(application: Application) : BaseV
             }
         } else {
             loading.value = false
-            error.value = sampleRoomDatabaseAndRetrofitApplication.getString(R.string.something_went_wrong)
+            error.value = getApplication<SampleRoomDatabaseAndRetrofitApplication>().getString(R.string.something_went_wrong)
         }
     }
 }

@@ -1,6 +1,8 @@
 package com.nick.sampleroomandretrofit.database.init_database
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.nick.sampleroomandretrofit.database.models.PositionDao
@@ -26,11 +28,20 @@ abstract class MyRoomDatabase : RoomDatabase() {
     abstract fun positionDao(): PositionDao
     abstract fun shipAndPositionDao(): ShipAndPositionDao
 
-    fun deleteAll() {
-        this.clearAllTables()
-    }
-
     companion object {
-        internal const val DB_NAME = "DB_NAME"
+        private const val DB_NAME = "DB_NAME"
+
+        private val LOCK = Any()
+
+        /**
+         * Reference for Hilt: https://github.com/google/iosched
+         * */
+        internal fun buildDatabase(context: Context) = synchronized(LOCK) {
+            Room.databaseBuilder(
+                context.applicationContext,
+                MyRoomDatabase::class.java,
+                DB_NAME
+            ).build()
+        }
     }
 }
