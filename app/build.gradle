@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'com.google.devtools.ksp' version "1.6.21-1.0.5"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -12,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.nick.sampleroomandretrofit"
-        minSdkVersion 24
+        minSdkVersion 25
         targetSdkVersion 32
         versionCode 1
         versionName "1.0.0"
@@ -24,12 +25,6 @@ android {
         }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = ["room.incremental": "true"]
-            }
-        }
     }
 
     buildTypes {
@@ -61,7 +56,7 @@ ext {
     roomVersion = '2.4.2'
     glideVersion = '4.13.2'
     navVersion = '2.4.2'
-    coroutineVersion = '1.6.1'
+    coroutineVersion = '1.6.2'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.6.0'
     retrofitVersion = "2.9.0"
@@ -88,7 +83,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
     //room database
     implementation "androidx.room:room-runtime:$roomVersion"
-    kapt "androidx.room:room-compiler:$roomVersion"
+    ksp "androidx.room:room-compiler:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
