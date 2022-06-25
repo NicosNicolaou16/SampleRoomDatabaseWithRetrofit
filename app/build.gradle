@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp' version "1.6.21-1.0.5"
+    id 'com.google.devtools.ksp' version "1.7.0-1.0.6"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -56,9 +56,9 @@ ext {
     roomVersion = '2.4.2'
     glideVersion = '4.13.2'
     navVersion = '2.4.2'
-    coroutineVersion = '1.6.2'
+    coroutineVersion = '1.6.3'
     multidexVersion = "2.0.1"
-    materialDesignVersion = '1.6.0'
+    materialDesignVersion = '1.6.1'
     retrofitVersion = "2.9.0"
 }
 
@@ -67,8 +67,8 @@ dependencies {
     //kotlin version
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
