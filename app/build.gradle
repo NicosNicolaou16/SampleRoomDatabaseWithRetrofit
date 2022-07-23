@@ -48,7 +48,6 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
-    namespace 'com.nick.sampleroomandretrofit'
 }
 
 ext {
@@ -61,7 +60,7 @@ ext {
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.6.1'
     retrofitVersion = "2.9.0"
-    hiltVersion = '2.42'
+    hiltVersion = '2.43'
     hiltCompilerVersion = "1.0.0"
 }
 
