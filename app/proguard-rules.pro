@@ -100,3 +100,7 @@
 # is used.
 -keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
 # End Retrofit proguard rules
+
+# Extra Proguard Rules
+-keep class com.nick.sampleroomandretrofit.modules.ships.ship_service.** { *; }
+-keep class kotlin.coroutines.Continuation
