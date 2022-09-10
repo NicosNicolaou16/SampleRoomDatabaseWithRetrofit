@@ -54,7 +54,7 @@ ext {
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.5.1'
     roomVersion = '2.4.3'
     glideVersion = '4.13.2'
-    navVersion = '2.5.1'
+    navVersion = '2.5.2'
     coroutineVersion = '1.6.4'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.6.1'
@@ -66,8 +66,8 @@ dependencies {
     //kotlin version
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
