@@ -60,7 +60,7 @@ ext {
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.6.1'
     retrofitVersion = "2.9.0"
-    hiltVersion = '2.43.2'
+    hiltVersion = '2.44'
     hiltCompilerVersion = "1.0.0"
 }
 
