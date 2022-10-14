@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp' version "1.7.20-1.0.6"
+    id 'com.google.devtools.ksp' version "1.7.20-1.0.7"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
