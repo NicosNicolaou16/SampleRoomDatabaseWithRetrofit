@@ -9,7 +9,7 @@ class ConverterPosition {
 
     @TypeConverter
     fun fromStringToPositions(value: String): PositionModel? {
-        return Gson().fromJson(value, TypeToken.getParameterized(PositionModel::class.java,PositionModel::class.java).type)
+        return Gson().fromJson(value, object : TypeToken<PositionModel>() {}.type)
     }
 
     @TypeConverter
