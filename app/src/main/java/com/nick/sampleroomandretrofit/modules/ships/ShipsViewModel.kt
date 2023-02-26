@@ -3,6 +3,7 @@ package com.nick.sampleroomandretrofit.modules.ships
 import android.app.Application
 import androidx.lifecycle.asLiveData
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
+import com.nick.sampleroomandretrofit.modules.ships.models.ShipsDataModel
 import com.nick.sampleroomandretrofit.modules.ships.ship_service.ShipsRepository
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseViewModel
 import kotlinx.coroutines.Dispatchers
@@ -17,15 +18,15 @@ class ShipsViewModel(application: Application) : BaseViewModel(application) {
 
     private fun requestShips() = flow {
         loading.value = true
-        var shipsModelList = mutableListOf<ShipsModel>()
+        var shipsDataModel = mutableListOf<ShipsDataModel>()
         withContext(Dispatchers.IO) {
-            shipsModelList = shipsRepository.requestBuilder().getShips()
+            val shipsModelList = shipsRepository.requestBuilder().getShips()
             ShipsModel.insertShips(shipsModelList).collect {
-                shipsModelList = it
+                shipsDataModel = ShipsDataModel.createShipDataModel(it)
             }
         }
         loading.value = false
-        emit(shipsModelList)
+        emit(shipsDataModel)
     }.catch {
         loading.value = false
         error.value = handleErrorMessage(it)
