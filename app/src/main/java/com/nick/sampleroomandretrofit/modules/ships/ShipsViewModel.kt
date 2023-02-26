@@ -3,6 +3,7 @@ package com.nick.sampleroomandretrofit.modules.ships
 import android.app.Application
 import androidx.lifecycle.asLiveData
 import com.nick.sampleroomandretrofit.database.models.ShipsModel
+import com.nick.sampleroomandretrofit.modules.ships.models.ShipsDataModel
 import com.nick.sampleroomandretrofit.modules.ships.ship_service.ShipService
 import com.nick.sampleroomandretrofit.utils.base_classes.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,21 +17,24 @@ import javax.inject.Inject
 class ShipsViewModel @Inject constructor(application: Application) : BaseViewModel(application) {
 
     @Inject
-    protected lateinit var shipService: ShipService
+    internal lateinit var shipService: ShipService
     var ships = requestShips().asLiveData()
 
     private fun requestShips() =
         flow {
             loading.value = true
-            var shipsModelList: MutableList<ShipsModel>
+            var shipsDataModel = mutableListOf<ShipsDataModel>()
             withContext(Dispatchers.IO) {
-                shipsModelList = shipService.getShips()
-                ShipsModel.insertShips(shipsModelList, myRoomDatabase).collect {
-                    shipsModelList = it
+                val shipsModelList = shipService.getShips()
+                ShipsModel.insertShips(
+                    shipsModelList = shipsModelList,
+                    myRoomDatabase = myRoomDatabase
+                ).collect {
+                    shipsDataModel = ShipsDataModel.createShipDataModel(it)
                 }
             }
             loading.value = false
-            emit(shipsModelList)
+            emit(shipsDataModel)
         }.catch {
             loading.value = false
             error.value = handleErrorMessage(it)
