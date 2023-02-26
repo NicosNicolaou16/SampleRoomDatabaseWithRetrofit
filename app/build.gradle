@@ -3,13 +3,13 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp' version "1.8.0-1.0.8"
+    id 'com.google.devtools.ksp' version "1.8.10-1.0.9"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
     compileSdk 33
-    buildToolsVersion '33.0.1'
+    buildToolsVersion '33.0.2'
 
     defaultConfig {
         applicationId "com.nick.sampleroomandretrofit"
@@ -52,12 +52,12 @@ android {
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.5.1'
-    roomVersion = '2.4.3'
-    glideVersion = '4.14.2'
+    roomVersion = '2.5.0'
+    glideVersion = '4.15.0'
     navVersion = '2.5.3'
     coroutineVersion = '1.6.4'
     multidexVersion = "2.0.1"
-    materialDesignVersion = '1.7.0'
+    materialDesignVersion = '1.8.0'
     retrofitVersion = "2.9.0"
 }
 
@@ -67,13 +67,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
     implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     //live cycle and data
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
     //KTX - Live data
@@ -98,7 +98,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     ksp "com.github.bumptech.glide:compiler:$glideVersion"
     //gson
-    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
     //Retrofit request
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
