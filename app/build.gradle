@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'com.google.devtools.ksp' version "1.8.20-1.0.10"
+    id 'com.google.devtools.ksp' version "1.8.21-1.0.11"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -57,11 +57,11 @@ ext {
     roomVersion = '2.5.1'
     glideVersion = '4.15.1'
     navVersion = '2.5.3'
-    coroutineVersion = '1.6.4'
+    coroutineVersion = '1.7.0'
     multidexVersion = "2.0.1"
-    materialDesignVersion = '1.8.0'
+    materialDesignVersion = '1.9.0'
     retrofitVersion = "2.9.0"
-    hiltVersion = '2.45'
+    hiltVersion = '2.46'
     hiltCompilerVersion = "1.0.0"
 }
 
