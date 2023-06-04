@@ -56,7 +56,7 @@ ext {
     roomVersion = '2.5.1'
     glideVersion = '4.15.1'
     navVersion = '2.5.3'
-    coroutineVersion = '1.7.0'
+    coroutineVersion = '1.7.1'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.9.0'
     retrofitVersion = "2.9.0"
@@ -67,7 +67,7 @@ dependencies {
     //kotlin version
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
