@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp' version "1.8.21-1.0.11"
+    id 'com.google.devtools.ksp' version "1.9.0-1.0.12"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -53,10 +53,10 @@ android {
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.6.1'
-    roomVersion = '2.5.1'
+    roomVersion = '2.5.2'
     glideVersion = '4.15.1'
-    navVersion = '2.5.3'
-    coroutineVersion = '1.7.1'
+    navVersion = '2.6.0'
+    coroutineVersion = '1.7.2'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.9.0'
     retrofitVersion = "2.9.0"
