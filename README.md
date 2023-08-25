@@ -19,7 +19,7 @@ minifyEnabled, shrinkResources, R8 are enabled <br />
 https://github.com/r-spacex/SpaceX-API (GitHub) <br />
 https://docs.spacexdata.com/?version=latest (Postman) <br />
 
-Target SDK version: 33 <br />
+Target SDK version: 34 <br />
 Minimum SDK version: 25 <br />
-Kotlin version: 1.9.0 <br />
-Gradle version: 8.1.0 <br />
+Kotlin version: 1.9.10 <br />
+Gradle version: 8.1.1 <br />
