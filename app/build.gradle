@@ -4,18 +4,18 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'com.google.devtools.ksp' version "1.9.0-1.0.13"
+    id 'com.google.devtools.ksp' version "1.9.10-1.0.13"
     id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
-    compileSdk 33
-    buildToolsVersion '33.0.2'
+    compileSdk 34
+    buildToolsVersion '34.0.0'
 
     defaultConfig {
         applicationId "com.nick.sampleroomandretrofit"
         minSdkVersion 25
-        targetSdkVersion 33
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0.0"
         multiDexEnabled true
@@ -55,8 +55,8 @@ ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.6.1'
     roomVersion = '2.5.2'
-    glideVersion = '4.15.1'
-    navVersion = '2.6.0'
+    glideVersion = '4.16.0'
+    navVersion = '2.7.1'
     coroutineVersion = '1.7.3'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.9.0'
