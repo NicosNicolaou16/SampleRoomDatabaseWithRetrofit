@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'com.google.devtools.ksp' version "1.9.10-1.0.13"
+    id 'com.google.devtools.ksp'
     id 'androidx.navigation.safeargs.kotlin'
 }
 
@@ -61,7 +61,7 @@ ext {
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.9.0'
     retrofitVersion = "2.9.0"
-    hiltVersion = '2.46.1'
+    hiltVersion = '2.48'
     hiltCompilerVersion = "1.0.0"
 }
 
@@ -108,7 +108,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     //Hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
-    kapt "com.google.dagger:hilt-compiler:$hiltVersion"
-    kapt "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
+    ksp "com.google.dagger:hilt-compiler:$hiltVersion"
+    ksp "androidx.hilt:hilt-compiler:$hiltCompilerVersion"
 
 }
