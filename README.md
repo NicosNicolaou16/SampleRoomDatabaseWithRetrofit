@@ -20,6 +20,6 @@ https://github.com/r-spacex/SpaceX-API (GitHub) <br />
 https://docs.spacexdata.com/?version=latest (Postman) <br />
 
 Target SDK version: 34 <br />
-Minimum SDK version: 25 <br />
+Minimum SDK version: 27 <br />
 Kotlin version: 1.9.10 <br />
 Gradle version: 8.1.2 <br />
