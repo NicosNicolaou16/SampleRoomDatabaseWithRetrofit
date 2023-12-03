@@ -10,6 +10,7 @@ plugins {
 android {
     compileSdk 34
     buildToolsVersion '34.0.0'
+    namespace 'com.nick.sampleroomandretrofit'
 
     defaultConfig {
         applicationId "com.nick.sampleroomandretrofit"
@@ -47,13 +48,12 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
-    namespace 'com.nick.sampleroomandretrofit'
 }
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.6.2'
-    roomVersion = '2.6.0'
+    roomVersion = '2.6.1'
     glideVersion = '4.16.0'
     navVersion = '2.7.5'
     coroutineVersion = '1.7.3'
