@@ -54,14 +54,14 @@ android {
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.6.2'
-    roomVersion = '2.6.0'
+    roomVersion = '2.6.1'
     glideVersion = '4.16.0'
     navVersion = '2.7.5'
     coroutineVersion = '1.7.3'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.10.0'
     retrofitVersion = "2.9.0"
-    hiltVersion = '2.48.1'
+    hiltVersion = '2.49'
     hiltCompilerVersion = '1.1.0'
 }
 
