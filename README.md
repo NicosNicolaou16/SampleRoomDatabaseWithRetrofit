@@ -14,7 +14,7 @@ MVVM <br />
 Support kapt and ksp (ksp only setup for Room Database) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
-# Feeds/Urls/End Point (parsing some data from response)
+# Feeds/Urls/End Point (parsing some data from the response)
 ## (Links References for Ends Points)
 https://github.com/r-spacex/SpaceX-API (GitHub) <br />
 https://docs.spacexdata.com/?version=latest (Postman) <br />
