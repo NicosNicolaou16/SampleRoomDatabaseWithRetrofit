@@ -55,10 +55,10 @@ ext {
     lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.6.2'
     roomVersion = '2.6.1'
     glideVersion = '4.16.0'
-    navVersion = '2.7.5'
+    navVersion = '2.7.6'
     coroutineVersion = '1.7.3'
     multidexVersion = "2.0.1"
-    materialDesignVersion = '1.10.0'
+    materialDesignVersion = '1.11.0'
     retrofitVersion = "2.9.0"
 }
 
