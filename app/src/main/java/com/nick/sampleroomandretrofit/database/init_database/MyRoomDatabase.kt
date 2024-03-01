@@ -22,7 +22,7 @@ import javax.inject.Inject
 abstract class MyRoomDatabase : RoomDatabase() {
 
     @Inject
-    protected lateinit var myRoomDatabase: MyRoomDatabase
+    internal lateinit var myRoomDatabase: MyRoomDatabase
 
     abstract fun shipDao(): ShipsDao
     abstract fun positionDao(): PositionDao
