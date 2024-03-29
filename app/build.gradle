@@ -60,8 +60,8 @@ ext {
     coroutineVersion = '1.8.0'
     multidexVersion = "2.0.1"
     materialDesignVersion = '1.11.0'
-    retrofitVersion = '2.10.0'
-    hiltVersion = '2.51'
+    retrofitVersion = '2.11.0'
+    hiltVersion = '2.51.1'
     hiltCompilerVersion = '1.2.0'
 }
 
