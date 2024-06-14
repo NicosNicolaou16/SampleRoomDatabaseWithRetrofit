@@ -52,7 +52,7 @@ android {
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
-    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.0'
+    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.2'
     roomVersion = '2.6.1'
     glideVersion = '4.16.0'
     navVersion = '2.7.7'
@@ -68,7 +68,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
     implementation 'androidx.core:core-ktx:1.13.1'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
@@ -99,7 +99,7 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     ksp "com.github.bumptech.glide:compiler:$glideVersion"
     //gson
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.google.code.gson:gson:2.11.0'
     //Retrofit request
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
