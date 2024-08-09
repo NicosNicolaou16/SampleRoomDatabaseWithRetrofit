@@ -52,7 +52,7 @@ android {
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
-    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.2'
+    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.4'
     roomVersion = '2.6.1'
     glideVersion = '4.16.0'
     navVersion = '2.7.7'
@@ -73,8 +73,8 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     //live cycle and data
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion"
     //KTX - Live data
