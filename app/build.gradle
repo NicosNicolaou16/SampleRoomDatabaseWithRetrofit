@@ -8,8 +8,8 @@ plugins {
 }
 
 android {
-    compileSdk 34
-    buildToolsVersion '34.0.0'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
     namespace 'com.nick.sampleroomandretrofit'
 
     defaultConfig {
@@ -52,7 +52,7 @@ android {
 
 ext {
     lifeCycleExtensionsVersion = "1.1.1"
-    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.6'
+    lifeCycleAndLiveDataCompilerAndViewModelKTXVersion = '2.8.7'
     roomVersion = '2.6.1'
     glideVersion = '4.16.0'
     navVersion = '2.8.3'
@@ -67,9 +67,9 @@ dependencies {
     //kotlin version
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     //architecture
-    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //unit test
     testImplementation 'junit:junit:4.13.2'
