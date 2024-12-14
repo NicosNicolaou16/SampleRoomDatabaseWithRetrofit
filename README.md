@@ -1,6 +1,8 @@
+# Sample Room Database With Retrofit
+
 This is a sample project that uses room database with retrofit to present list of data on a recycler
 view using data binding. <br />
-[Click here and check the branch updateToHilt,it is migration of the project with Hilt Dependency Injection](https://github.com/NicosNicolaou16/SampleRoomDatabaseWithRetrofit/tree/updateToHilt)
+[Migration to Hilt Dependency Injection - updateToHilt (Branch)](https://github.com/NicosNicolaou16/SampleRoomDatabaseWithRetrofit/tree/updateToHilt)
 
 # The Project Contain the following technologies
 
