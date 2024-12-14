@@ -14,8 +14,13 @@ offer more concise and expressive code for working with Android APIs and librari
 the retrieved data from the remote server, querying data from the local database, and supporting
 offline functionality.  <br />
 [Retrofit](https://square.github.io/retrofit/) is responsible for making requests and retrieving data from the remote server. ([Repository](https://github.com/square/retrofit)) <br />
-Data Binding <br />
-View Binding <br />
+[Data Binding](https://developer.android.com/topic/libraries/data-binding) in Android lets you link
+UI components to data directly in the XML layout. It automatically updates the UI when the data
+changes, reducing the need for manual coding and making the app easier to maintain. <br />
+[View Binding](https://developer.android.com/topic/libraries/view-binding) in Android is a feature
+that automatically generates a binding class for each layout, providing direct access to the views
+without using `findViewById()`. It ensures safer, type-checked code by reducing the risk of errors
+like `NullPointerException`, making the code simpler and more maintainable. <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
