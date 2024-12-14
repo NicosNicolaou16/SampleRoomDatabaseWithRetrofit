@@ -16,8 +16,6 @@ offline functionality.  <br />
 [Retrofit](https://square.github.io/retrofit/) is responsible for making requests and retrieving data from the remote server. ([Repository](https://github.com/square/retrofit)) <br />
 Data Binding <br />
 View Binding <br />
-Coroutines <br />
-Kotlin ktx <br />
 Navigation <br />
 Live Data <br />
 MVVM <br />
