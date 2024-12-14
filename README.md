@@ -13,7 +13,7 @@ offer more concise and expressive code for working with Android APIs and librari
 [Room Database](https://developer.android.com/training/data-storage/room) is responsible for saving
 the retrieved data from the remote server, querying data from the local database, and supporting
 offline functionality.  <br />
-Retrofit (Network Manager) <br />
+[Retrofit](https://square.github.io/retrofit/) is responsible for making requests and retrieving data from the remote server. ([Repository](https://github.com/square/retrofit)) <br />
 Data Binding <br />
 View Binding <br />
 Coroutines <br />
