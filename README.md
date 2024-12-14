@@ -24,7 +24,10 @@ like `NullPointerException`, making the code simpler and more maintainable. <br 
 [Navigation](https://developer.android.com/guide/navigation) in Android manages how users move
 between screens. The Navigation Component simplifies this by using a navigation graph to define and
 handle navigation paths, back stack management, and data passing between screens. <br />
-Live Data <br />
+[Live Data](https://developer.android.com/topic/libraries/architecture/livedata) in Android is a
+lifecycle-aware data holder that allows UI components to observe data changes. It automatically
+updates the UI when data changes, ensuring updates occur only when the component is in an active
+lifecycle state, preventing memory leaks and crashes. <br />
 MVVM <br />
 Support kapt and ksp (ksp only setup for Room Database) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
