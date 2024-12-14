@@ -13,7 +13,8 @@ offer more concise and expressive code for working with Android APIs and librari
 [Room Database](https://developer.android.com/training/data-storage/room) is responsible for saving
 the retrieved data from the remote server, querying data from the local database, and supporting
 offline functionality.  <br />
-[Retrofit](https://square.github.io/retrofit/) is responsible for making requests and retrieving data from the remote server. ([Repository](https://github.com/square/retrofit)) <br />
+[Retrofit](https://square.github.io/retrofit/) is responsible for making requests and retrieving
+data from the remote server. ([Repository](https://github.com/square/retrofit)) <br />
 [Data Binding](https://developer.android.com/topic/libraries/data-binding) in Android lets you link
 UI components to data directly in the XML layout. It automatically updates the UI when the data
 changes, reducing the need for manual coding and making the app easier to maintain. <br />
@@ -28,7 +29,10 @@ handle navigation paths, back stack management, and data passing between screens
 lifecycle-aware data holder that allows UI components to observe data changes. It automatically
 updates the UI when data changes, ensuring updates occur only when the component is in an active
 lifecycle state, preventing memory leaks and crashes. <br />
-MVVM <br />
+[MVVM](https://developer.android.com/topic/architecture#recommended-app-arch) with repository is an
+architecture where the Repository manages data sources (e.g., network, database), the ViewModel
+processes the data for the UI, and the View displays the UI, ensuring a clear separation of
+concerns. <br />
 Support kapt and ksp (ksp only setup for Room Database) <br />
 minifyEnabled, shrinkResources, R8 are enabled <br />
 
