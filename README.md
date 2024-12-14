@@ -1,7 +1,14 @@
 This is a sample project that uses room database with retrofit to present list of data on a recycler view using data binding. <br />
 [Click here and check the branch updateToHilt,it is migration of the project with Hilt Dependency Injection](https://github.com/NicosNicolaou16/SampleRoomDatabaseWithRetrofit/tree/updateToHilt)
 
-# The Project contains:
+# The Project Contain the following technologies
+
+The programming language is the [Kotlin](https://kotlinlang.org/docs/getting-started.html), it is a
+modern, JVM-based programming language that is concise, safe, and interoperable with Java. <br />
+[Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) is used for asynchronous
+tasks. <br />
+[Kotlin KTX](https://developer.android.com/kotlin/ktx) is a collection of Kotlin extensions that
+offer more concise and expressive code for working with Android APIs and libraries.
 Room Database <br />
 Retrofit (Network Manager) <br />
 Data Binding <br />
