@@ -21,7 +21,9 @@ changes, reducing the need for manual coding and making the app easier to mainta
 that automatically generates a binding class for each layout, providing direct access to the views
 without using `findViewById()`. It ensures safer, type-checked code by reducing the risk of errors
 like `NullPointerException`, making the code simpler and more maintainable. <br />
-Navigation <br />
+[Navigation](https://developer.android.com/guide/navigation) in Android manages how users move
+between screens. The Navigation Component simplifies this by using a navigation graph to define and
+handle navigation paths, back stack management, and data passing between screens. <br />
 Live Data <br />
 MVVM <br />
 Support kapt and ksp (ksp only setup for Room Database) <br />
