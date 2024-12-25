@@ -10,7 +10,7 @@ modern, JVM-based programming language that is concise, safe, and interoperable 
 [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) is used for asynchronous
 tasks. <br />
 [Kotlin KTX](https://developer.android.com/kotlin/ktx) is a collection of Kotlin extensions that
-offer more concise and expressive code for working with Android APIs and libraries.
+offer more concise and expressive code for working with Android APIs and libraries. <br />
 [Room Database](https://developer.android.com/training/data-storage/room) is responsible for saving
 the retrieved data from the remote server, querying data from the local database, and supporting
 offline functionality.  <br />
