@@ -46,7 +46,8 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = "17" // For Groovy, you often just provide the string
+        freeCompilerArgs += ["-Xannotation-default-target=param-property"]
     }
 }
 
