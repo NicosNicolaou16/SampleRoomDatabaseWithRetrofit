@@ -59,7 +59,6 @@ android {
     }
 }
 
-val lifeCycleExtensionsVersion by extra("1.1.1")
 val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.9.3")
 val roomVersion by extra("2.7.2")
 val glideVersion by extra("5.0.4")
@@ -108,5 +107,4 @@ dependencies {
     //Retrofit request
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
-
 }
