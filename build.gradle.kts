@@ -6,16 +6,16 @@ buildscript {
     }
     dependencies {
         classpath("com.android.tools.build:gradle:8.13.2")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.2.10")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.9.3")
-        classpath("com.google.dagger:hilt-android-gradle-plugin:2.57.1")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.3.0")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.9.6")
+        classpath("com.google.dagger:hilt-android-gradle-plugin:2.57.2")
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
 plugins {
-    id("com.google.devtools.ksp") version "2.2.10-2.0.2" apply false
+    id("com.google.devtools.ksp") version "2.3.4" apply false
 }
 
 tasks.register("clean", Delete::class) {

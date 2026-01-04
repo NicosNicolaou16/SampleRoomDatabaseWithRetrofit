@@ -63,14 +63,14 @@ android {
 
 val lifeCycleExtensionsVersion by extra("1.1.1")
 val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.10.0")
-val roomVersion by extra("2.7.2")
-val glideVersion by extra("5.0.4")
-val navVersion by extra("2.9.3")
+val roomVersion by extra("2.8.4")
+val glideVersion by extra("5.0.5")
+val navVersion by extra("2.9.6")
 val coroutineVersion by extra("1.10.2")
 val multidexVersion by extra("2.0.1")
 val materialDesignVersion by extra("1.13.0")
 val retrofitVersion by extra("3.0.0")
-val hiltVersion by extra("2.57.1")
+val hiltVersion by extra("2.57.2")
 val hiltCompilerVersion by extra("1.2.0")
 
 dependencies {
@@ -108,7 +108,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
     // Gson
-    implementation("com.google.code.gson:gson:2.13.1")
+    implementation("com.google.code.gson:gson:2.13.2")
     //Retrofit request
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
