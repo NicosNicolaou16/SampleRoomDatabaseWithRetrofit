@@ -55,14 +55,15 @@ android {
     kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.fromTarget("21")
+            freeCompilerArgs = listOf("-Xannotation-default-target=param-property")
         }
     }
 }
 
-val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.9.3")
-val roomVersion by extra("2.7.2")
-val glideVersion by extra("5.0.4")
-val navVersion by extra("2.9.3")
+val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.10.0")
+val roomVersion by extra("2.8.4")
+val glideVersion by extra("5.0.5")
+val navVersion by extra("2.9.6")
 val coroutineVersion by extra("1.10.2")
 val multidexVersion by extra("2.0.1")
 val materialDesignVersion by extra("1.13.0")
@@ -103,7 +104,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
     // Gson
-    implementation("com.google.code.gson:gson:2.13.1")
+    implementation("com.google.code.gson:gson:2.13.2")
     //Retrofit request
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
