@@ -56,12 +56,13 @@ android {
     kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.fromTarget("21")
+            freeCompilerArgs = listOf("-Xannotation-default-target=param-property")
         }
     }
 }
 
 val lifeCycleExtensionsVersion by extra("1.1.1")
-val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.9.3")
+val lifeCycleAndLiveDataCompilerAndViewModelKTXVersion by extra("2.10.0")
 val roomVersion by extra("2.7.2")
 val glideVersion by extra("5.0.4")
 val navVersion by extra("2.9.3")

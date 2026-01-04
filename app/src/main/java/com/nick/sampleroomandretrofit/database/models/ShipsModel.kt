@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.flow
 @Entity
 data class ShipsModel(
     @PrimaryKey
-        var ship_id: String,
+    var ship_id: String,
     var ship_name: String?,
     var ship_type: String?,
     @TypeConverters(ConverterPosition::class)
-        var position: PositionModel,
+    var position: PositionModel,
     var positionId: Long,
     var successful_landings: Int?,
     var attempted_landings: Int?,
@@ -24,7 +24,8 @@ data class ShipsModel(
 
     companion object {
 
-        fun insertShips(shipsModelList: MutableList<ShipsModel>, myRoomDatabase: MyRoomDatabase) = flow {
+        fun insertShips(shipsModelList: MutableList<ShipsModel>, myRoomDatabase: MyRoomDatabase) =
+            flow {
                 deletePositionModel(myRoomDatabase)
                 val shipsModelListTemp = mutableListOf<ShipsModel>()
                 shipsModelList.forEach {
