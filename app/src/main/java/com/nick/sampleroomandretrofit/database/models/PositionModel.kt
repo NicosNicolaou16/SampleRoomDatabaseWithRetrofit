@@ -7,18 +7,19 @@ import kotlinx.coroutines.flow.flow
 
 @Entity
 data class PositionModel(
-        @PrimaryKey(autoGenerate = true)
-        var position_id: Long,
-        var latitude: Double?,
-        var longitude: Double?
+    @PrimaryKey(autoGenerate = true)
+    var position_id: Long,
+    var latitude: Double?,
+    var longitude: Double?
 ) {
 
     companion object {
-        suspend fun insertThePosition(positionModel: PositionModel) = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
-            flow {
-                getDatabase().positionDao().insertOrReplaceObject(positionModel)
-                emit(getDatabase().positionDao().getPosition())
+        suspend fun insertThePosition(positionModel: PositionModel) =
+            with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
+                flow {
+                    getDatabase().positionDao().insertOrReplaceObject(positionModel)
+                    emit(getDatabase().positionDao().getPosition())
+                }
             }
-        }
     }
 }

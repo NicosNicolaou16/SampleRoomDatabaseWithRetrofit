@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.flow
 @Entity
 data class ShipsModel(
     @PrimaryKey
-        var ship_id: String,
+    var ship_id: String,
     var ship_name: String?,
     var ship_type: String?,
     @TypeConverters(ConverterPosition::class)
-        var position: PositionModel,
+    var position: PositionModel,
     var positionId: Long,
     var successful_landings: Int?,
     var attempted_landings: Int?,
@@ -24,18 +24,19 @@ data class ShipsModel(
 
     companion object {
 
-        fun insertShips(shipsModelList: MutableList<ShipsModel>) = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
-            flow {
-                deletePositionModel()
-                val shipsModelListTemp = mutableListOf<ShipsModel>()
-                shipsModelList.forEach {
-                    insertPosition(it)
-                    shipsModelListTemp.add(it)
+        fun insertShips(shipsModelList: MutableList<ShipsModel>) =
+            with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
+                flow {
+                    deletePositionModel()
+                    val shipsModelListTemp = mutableListOf<ShipsModel>()
+                    shipsModelList.forEach {
+                        insertPosition(it)
+                        shipsModelListTemp.add(it)
+                    }
+                    getDatabase().shipDao().insertOrReplaceList(shipsModelListTemp)
+                    emit(getDatabase().shipDao().getAllShips())
                 }
-                getDatabase().shipDao().insertOrReplaceList(shipsModelListTemp)
-                emit(getDatabase().shipDao().getAllShips())
             }
-        }
 
         private suspend fun insertPosition(shipsModel: ShipsModel) {
             PositionModel.insertThePosition(shipsModel.position).collect {
@@ -43,8 +44,9 @@ data class ShipsModel(
             }
         }
 
-        private suspend fun deletePositionModel() = with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
-            getDatabase().positionDao().deleteAll()
-        }
+        private suspend fun deletePositionModel() =
+            with(SampleRoomDatabaseAndRetrofitApplication.getInstance()) {
+                getDatabase().positionDao().deleteAll()
+            }
     }
 }
