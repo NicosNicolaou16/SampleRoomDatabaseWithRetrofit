@@ -104,7 +104,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
     // Gson
-    implementation("com.google.code.gson:gson:2.13.1")
+    implementation("com.google.code.gson:gson:2.13.2")
     //Retrofit request
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
