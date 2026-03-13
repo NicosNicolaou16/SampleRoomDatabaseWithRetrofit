@@ -13,10 +13,6 @@
 
 A sample Android project demonstrating the integration of **Room Database** with **Retrofit**. This app fetches data from a remote API and displays it in a RecyclerView, showcasing best practices for offline caching and data persistence.
 
-> [!TIP]  
-> Looking for a Hilt implementation?  
-> 👉 **[Check out the updateToHilt branch](https://github.com/NicosNicolaou16/SampleRoomDatabaseWithRetrofit/tree/updateToHilt)** 👈
-
 ## ✨ Features
 
 * **Offline Support:** Caches retrieved data in a local **Room Database**, allowing the app to function without an active internet connection.
