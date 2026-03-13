@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     id("com.android.application")
     id("kotlin-parcelize")
-    id("kotlin-kapt")
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -83,7 +82,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     //KTX - Live data
     //noinspection LifecycleAnnotationProcessorWithJava8
-    kapt("androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
+    ksp("androidx.lifecycle:lifecycle-compiler:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifeCycleAndLiveDataCompilerAndViewModelKTXVersion")
     //room database
     implementation("androidx.room:room-runtime:$roomVersion")
