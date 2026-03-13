@@ -96,8 +96,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
     //materials
     implementation("com.google.android.material:material:$materialDesignVersion")
-    //multidex
-    implementation("androidx.multidex:multidex:$multidexVersion")
     //Glide - load the images
     implementation("com.github.bumptech.glide:glide:$glideVersion")
     ksp("com.github.bumptech.glide:compiler:$glideVersion")
