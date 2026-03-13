@@ -2,7 +2,6 @@ package com.nick.sampleroomandretrofit.utils.extension
 
 import android.content.Context
 import android.widget.ImageView
-import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.request.RequestOptions
